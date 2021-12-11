@@ -21,22 +21,27 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <section class="container">
       <h1>Movies {loading ? null : movies.count}</h1>
-      {loading ? <strong>Now Loading</strong> : null}
-      <div>
-        {movies.map((movie) => (
-          <Movie
-            key={movie.id}
-            id={movie.id}
-            coverImage={movie.medium_cover_image}
-            genres={movie.genres}
-            title={movie.title}
-            summary={movie.summary}
-          />
-        ))}
-      </div>
-    </div>
+
+      {loading ? (
+        <div class="loader__text">Loading...</div>
+      ) : (
+        <div class="movies">
+          {movies.map((movie) => (
+            <Movie
+              key={movie.id}
+              id={movie.id}
+              coverImage={movie.medium_cover_image}
+              genres={movie.genres}
+              title={movie.title}
+              summary={movie.summary}
+              year={movie.year}
+            />
+          ))}
+        </div>
+      )}
+    </section>
   );
 }
 
