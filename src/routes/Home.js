@@ -1,7 +1,6 @@
 // import Button from "./Button";
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
-import axios from "axios";
 
 function Home() {
   const [loading, setLoading] = useState(true);
