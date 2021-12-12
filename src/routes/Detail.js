@@ -17,8 +17,6 @@ function Detail() {
     getMovie();
   });
 
-  console.log(movie);
-
   // console.log(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`);
   return (
     <div>
