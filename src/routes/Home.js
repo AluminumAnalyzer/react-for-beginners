@@ -1,6 +1,8 @@
 // import Button from "./Button";
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import About from "./About";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
@@ -23,6 +25,9 @@ function Home() {
 
   return (
     <section className="container">
+      <h3>
+        <Link to="/About">About</Link>
+      </h3>
       <h1>Movies {loading ? null : movies.count}</h1>
 
       <br />
