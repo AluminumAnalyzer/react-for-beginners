@@ -5,12 +5,7 @@ import "../components/Movie.css";
 function Movie({ id, coverImage, title, summary, genres, year }) {
   return (
     <div className="movie">
-      <Link
-        to={{
-          pathname: "/movie-detail",
-          state: { year, title, summary, coverImage, genres },
-        }}
-      >
+      <Link to={`/movie/${id}`}>
         <img src={coverImage} alt={title} />
         <div className="movie__data">
           <h3 className="movie__title">
