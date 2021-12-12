@@ -4,18 +4,17 @@ import "../components/Movie.css";
 
 function Movie({ id, coverImage, title, summary, genres, year }) {
   return (
-    <div class="movie">
+    <div className="movie">
       <img src={coverImage} alt={title} />
-      <div class="movie__data">
-        <h3 class="movie__title">{title}</h3>
-        <h5 class="movie__year">{year}</h5>
-        <h2>
+      <div className="movie__data">
+        <h3 className="movie__title">
           <Link to={`/movie/${id}`}>{title}</Link>
-        </h2>
+        </h3>
+        <h5 className="movie__year">{year}</h5>
         <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
-        <ul>
-          {genres.map((g) => (
-            <li key={g}>{g}</li>
+        <ul className="movie__genres">
+          {genres.map((g, index) => (
+            <li key={index}>{g}</li>
           ))}
         </ul>
       </div>

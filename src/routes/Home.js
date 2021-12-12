@@ -21,13 +21,15 @@ function Home() {
   }, []);
 
   return (
-    <section class="container">
+    <section className="container">
       <h1>Movies {loading ? null : movies.count}</h1>
 
       {loading ? (
-        <div class="loader__text">Loading...</div>
+        <div className="loader">
+          <span className="loader__text">Loading...</span>
+        </div>
       ) : (
-        <div class="movies">
+        <div className="movies">
           {movies.map((movie) => (
             <Movie
               key={movie.id}
