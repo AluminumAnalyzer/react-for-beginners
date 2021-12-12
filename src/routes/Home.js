@@ -1,6 +1,7 @@
 // import Button from "./Button";
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import "./Home.css";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,8 @@ function Home() {
   return (
     <section className="container">
       <h1>Movies {loading ? null : movies.count}</h1>
+
+      <br />
 
       {loading ? (
         <div className="loader">
