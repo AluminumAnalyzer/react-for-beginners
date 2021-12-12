@@ -15,7 +15,7 @@ function Detail() {
 
   useEffect(() => {
     getMovie();
-  });
+  }, []);
 
   // console.log(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`);
   return (
