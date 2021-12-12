@@ -1,7 +1,6 @@
 // import Button from "./Button";
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
-import About from "./About";
 import { Link } from "react-router-dom";
 import "./Home.css";
 

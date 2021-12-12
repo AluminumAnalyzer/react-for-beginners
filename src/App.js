@@ -2,12 +2,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Details from "./routes/Detail";
 import About from "./routes/About";
+import Navigation from "./components/Navigation";
 
 import "./App.css";
 
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <Navigation />
       <Routes>
         <Route path="/movie/:id" element={<Details />} />
         <Route path="/about" element={<About />} />
