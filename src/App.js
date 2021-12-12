@@ -10,7 +10,6 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Navigation />
         <Route path="/movie/:id" element={<Details />} />
         <Route path="/about" element={<About />} />
         <Route path="/" exact={true} element={<Home />} />
